@@ -55,7 +55,7 @@ def	h3(s):
 	for i in range(len(board ) ):
 		
 		n = board[i]
-		if (n == 0 ):
+		if not(n):
 			n = 9
 
 		res += int((n - 1 ) // 3 != (i // 3 )) + int((n - 1 ) % 3 != i % 3)
