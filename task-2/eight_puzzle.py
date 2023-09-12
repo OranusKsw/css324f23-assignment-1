@@ -48,7 +48,16 @@ def h1(s):
             res += 1
     return res
 
-def h3(s):
+def	h3(s):
     # implement this function
-    board, _, _ = s
-    return 0
+	board, _, _ = s
+	res = 0
+	for i in range(len(board ) ):
+		
+		n = board[i]
+		if (n == 0 ):
+			n = 9
+
+		res += int((n - 1 ) // 3 != (i // 3 )) + int((n - 1 ) % 3 != i % 3)
+
+	return res
